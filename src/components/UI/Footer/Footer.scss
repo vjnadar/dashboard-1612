@@ -1,0 +1,42 @@
+.Footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 300;
+  
+    @media (min-width: 76rem) {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      right: 3px;
+      width: 100%;
+      height: 2.5rem;
+      text-align: right;
+      color: white;
+    }
+    @media only screen and (min-device-width: 37.5rem) and (max-device-height: 25.7rem) and (orientation: landscape) {
+      display: block;
+      position: relative;
+    }
+    a:link {
+      color: rgb(146, 211, 241);
+      text-decoration: none;
+    }
+    a:visited {
+      color: rgb(43, 126, 165);
+    }
+    .Footer__text {
+      font-size: small;
+      padding: 7px;
+      margin: 2px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  

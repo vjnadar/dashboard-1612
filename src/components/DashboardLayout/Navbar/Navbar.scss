@@ -1,0 +1,42 @@
+.Navbar {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e2e;
+    color: antiquewhite;
+    .Navbar__space {
+        flex: 0.95;
+    }
+    .Navbar__items ul {
+        display: flex;
+        margin: 15px;
+        padding: 15px;
+        list-style: none;
+    }
+    .Navbar__item {
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+    .Navbar__logo {
+        margin: 15px;
+        padding: 15px;
+    }
+    .Navbar__search-bar {
+        display: block;
+        width: 150px;
+        height: 30px;
+    }
+    .Navbar__select-option {
+        display: block;
+        width: 150px;
+        height: 30px;
+    }
+    .Navbar__search-bar,
+    .Navbar__select-option:focus {
+        outline: none;
+        background: rgb(255, 255, 255);
+        border-color: rgb(17, 140, 189);
+    }
+}

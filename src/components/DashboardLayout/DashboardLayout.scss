@@ -1,0 +1,14 @@
+.Dashboard-Layout {
+    display: flex;
+    flex-direction: column;
+    .Dashboard-Layout__container {
+        height: 100vh;
+        width: 100vw;
+        background-color: #1e1e2e;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+    }
+}
