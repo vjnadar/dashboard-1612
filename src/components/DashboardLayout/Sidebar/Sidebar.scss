@@ -8,66 +8,65 @@
     color: white;
     border-radius: 5px;
     overflow-x: auto;
+    .Sidebar__title ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 3px;
+        padding: 3px;
+        gap: 12px;
+        margin-bottom: 20px;
+        list-style: none;
+        font-size: 14.2px;
+        border-bottom: 0.5px solid rgb(204, 204, 204);
+    }
+    .Sidebar__items ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-}
-.Sidebar__title ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 3px;
-    padding: 3px;
-    gap: 12px;
-    margin-bottom: 20px;
-    list-style: none;
-    font-size: 14.2px;
-    border-bottom: 0.5px solid rgb(204, 204, 204);
-}
-.Sidebar__items ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.Sidebar__item {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin: 3px;
-    padding: 3px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 25px;
-}
-.Sidebar__item a {
-    text-decoration: none;
-    color: rgb(204, 204, 204);
-    font-size: 12px;
-}
-.Sidebar__item a:hover {
-    color: white;
-}
-.Sidebar__item--icons {
-    width: 28px;
-    height: 31px;
-}
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 6px;
-    outline: none;
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(247, 247, 247);
-    border-radius: 8px;
-    outline: none;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(54, 56, 58);
-    outline: none;
+    .Sidebar__item {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin: 3px;
+        padding: 3px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+    }
+    .Sidebar__item a {
+        text-decoration: none;
+        color: rgb(204, 204, 204);
+        font-size: 12px;
+    }
+    .Sidebar__item a:hover {
+        color: white;
+    }
+    .Sidebar__item--icons {
+        width: 28px;
+        height: 31px;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 6px;
+        outline: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(247, 247, 247);
+        border-radius: 8px;
+        outline: none;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(54, 56, 58);
+        outline: none;
+    }
 }
