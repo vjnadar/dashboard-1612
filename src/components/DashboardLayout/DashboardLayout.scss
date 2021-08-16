@@ -11,4 +11,11 @@
         margin: 0%;
         padding: 0%;
     }
+    .Dashboard-Layout__sidebar-layout-container{
+        height:100%;
+        width: 250px;
+    }
+    .Dashboard-Layout__menu-layout-container {
+        flex: 1;
+    }
 }

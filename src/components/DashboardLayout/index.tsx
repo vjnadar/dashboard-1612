@@ -12,10 +12,10 @@ function DashboardLayout(): JSX.Element {
                 <Navbar />
             </div>
             <ul className="Dashboard-Layout__container" data-test="Dashboard-Layout__container">
-                <li>
+                <li className="Dashboard-Layout__sidebar-layout-container">
                     <Sidebar dashboardRoutes={dashboardRoutes} />
                 </li>
-                <li>
+                <li className="Dashboard-Layout__menu-layout-container">
                     <DashboardMenuLayout dashboardRoutes={dashboardRoutes} />
                 </li>
             </ul>
