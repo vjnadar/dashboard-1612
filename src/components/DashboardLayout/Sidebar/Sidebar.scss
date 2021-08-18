@@ -30,6 +30,9 @@
         padding: 0;
     }
     .Sidebar__item {
+        margin-bottom: 25px;
+    }
+    .Sidebar__item-link {
         display: flex;
         flex-direction: row;
         gap: 20px;
@@ -37,14 +40,11 @@
         padding: 3px;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: 25px;
-    }
-    .Sidebar__item a {
         text-decoration: none;
         color: rgb(204, 204, 204);
         font-size: 12px;
     }
-    .Sidebar__item a:hover {
+    .Sidebar__item-link:hover {
         color: white;
     }
     .Sidebar__item--icons {

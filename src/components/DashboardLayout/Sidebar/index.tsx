@@ -22,9 +22,9 @@ function Sidebar({ dashboardRoutes }: SideBarProps): JSX.Element {
                 <ul>
                     {dashboardRoutes.map((route) => (
                         <li key={route.name} className="Sidebar__item" data-test="Sidebar__item">
-                            <route.icon className="Sidebar__item--icons" />
-                            <Link to={route.path} className="col" data-test={`Sidebar__${route.name}-Link`}>
-                                {route.name}
+                            <Link to={route.path} className="Sidebar__item-link" data-test={`Sidebar__${route.name}-Link`}>
+                                <route.icon className="Sidebar__item--icons" />
+                                <span>{route.name}</span>
                             </Link>
                         </li>
                     ))}
