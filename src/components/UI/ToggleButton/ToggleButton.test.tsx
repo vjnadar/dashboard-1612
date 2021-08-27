@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { createWrapper, findByDataTestAttribute, findByClassAttribute } from '../../../utilities';
 import { Wrapper } from '../../../generalTypes';
 import { WrapperTypes } from '../../../utilities/testFunctions/enums';
@@ -27,22 +26,22 @@ describe('this test-suite unit tests <ToggleButton/>', () => {
 });
 describe('this test-suite tests the behaviour of <ToggleButton>', () => {
     it('should the state of <Modal/>, when transformation is true', () => {
-        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: true, setTransformation: jest.fn(), dark: false  });
+        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: true, setTransformation: jest.fn(), dark: false });
         const toggleBtnComp = findByClassAttribute(wrapper, 'Toggle-Button');
         expect(toggleBtnComp.length).toBe(1);
     });
     it('should the state of <Modal/>, when transformation is false', () => {
-        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: false  });
+        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: false });
         const toggleBtnComp = findByClassAttribute(wrapper, 'open');
         expect(toggleBtnComp.length).toBe(1);
     });
     it('should the state of <Modal/>, when dark is false', () => {
-        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: false  });
+        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: false });
         const toggleBtnBurger = findByClassAttribute(wrapper, 'Toggle-Button__burger');
         expect(toggleBtnBurger.length).toBe(1);
     });
     it('should the state of <Modal/>, when dark is true', () => {
-        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: true  });
+        const wrapper: Wrapper = createToggleButtonTestWrapper({ transformation: false, setTransformation: jest.fn(), dark: true });
         const toggleBtnBurger = findByClassAttribute(wrapper, 'dark');
         expect(toggleBtnBurger.length).toBe(1);
     });

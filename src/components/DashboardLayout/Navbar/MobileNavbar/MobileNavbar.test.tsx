@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { createWrapper, findByDataTestAttribute, findByClassAttribute } from '../../../../utilities';
+import { createWrapper, findByDataTestAttribute } from '../../../../utilities';
 import { Wrapper } from '../../../../generalTypes';
 import { WrapperTypes } from '../../../../utilities/testFunctions/enums';
 import MobileNavbar from '.';
