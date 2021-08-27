@@ -1,0 +1,14 @@
+import { DropdownItems } from '../../types';
+
+export type MobileNavbarProps = {
+    transformation: boolean;
+    setTransformation: React.Dispatch<React.SetStateAction<boolean>>;
+    searchbarOpen: boolean;
+    toggle: (string) => void;
+    mobileNavVisibility: boolean;
+    setMobileNavVisibility: React.Dispatch<React.SetStateAction<boolean>>;
+    profileDropdownOpen: boolean;
+    notificationDropdownOpen: boolean;
+    profileDropdownItems: DropdownItems[];
+    notificationDropdownItems: DropdownItems[];
+};
