@@ -1,11 +1,17 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import { MobileNavbarProps } from './types';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {useLocation} from 'react-router-dom';
 import { Searchbar } from '../../../UI';
 import { ToggleButton } from '../../../UI';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import './MobileNavbar.css';
+import dashboardRoutes from '../../../../routes';
+import { MobileNavbarProps } from './types';
+import {MenuNames} from '../enums'
+import avatarSvg from '../../../../assets/navbar-icons/avatar.svg';
+import notificationSvg from '../../../../assets/navbar-icons/notification.svg';
+import searchSvg from '../../../../assets/navbar-icons/search.svg';
+import './MobileNavbar.scss';
 
 function MobileNavbar({
     transformation,
@@ -19,6 +25,7 @@ function MobileNavbar({
     profileDropdownItems,
     notificationDropdownItems,
 }: MobileNavbarProps): JSX.Element {
+    const location=useLocation();
     let sidebarTransformation;
     if (mobileNavVisibility && transformation) {
         sidebarTransformation = 'Mobile-Navbar slide-down';
@@ -44,7 +51,7 @@ function MobileNavbar({
                             <ToggleButton dark={true} transformation={transformation} setTransformation={setTransformation} />
                         </li>
                         <li className="Mobile-Navbar__toggle-item" data-test="Mobile-Navbar__toggle-item">
-                            DASHBOARD
+                        {dashboardRoutes.find(route=>route.path===location.pathname)?.name.toUpperCase()}
                         </li>
                     </ul>
                 </div>
@@ -64,9 +71,9 @@ function MobileNavbar({
             </nav>
             <nav>
                 <ul className="Mobile-Navbar__items" data-test="Mobile-Navbar__items">
-                    <li className="Mobile-Navbar__item" data-test="Mobile-Navbar__item" onClick={() => toggle('SEARCH_BAR')}>
+                    <li className="Mobile-Navbar__item" data-test="Mobile-Navbar__item" onClick={() => toggle(MenuNames.Searchbar)}>
                         <span className="Mobile-Navbar__item-avatar" data-test="Mobile-Navbar__item-avatar">
-                            <Avatar className="search-button" alt="search" src="search.svg" />
+                            <Avatar className="search-button" alt="search" src={searchSvg} />
                         </span>
                         <span className="Mobile-Navbar__item-text" data-test="Mobile-Navbar__item-text">
                             SEARCH
@@ -76,11 +83,11 @@ function MobileNavbar({
                         className="Mobile-Navbar__item"
                         data-test="Mobile-Navbar__item"
                         onClick={() => {
-                            toggle('NOTIFICATION_DROPDOWN');
+                            toggle(MenuNames.NotificationDropdown);
                         }}
                     >
                         <span className="Mobile-Navbar__item-avatar" data-test="Mobile-Navbar__item-avatar">
-                            <Avatar alt="" src="notification.svg" />
+                            <Avatar alt="notification.svg" src={notificationSvg} />
                         </span>
                         <span className="Mobile-Navbar__item-text" data-test="Mobile-Navbar__item-text">
                             Notification
@@ -97,8 +104,8 @@ function MobileNavbar({
                         data-test="Mobile-Navbar__item-list"
                     >
                         <ul className="Mobile-Navbar__item-list-container">
-                            {notificationDropdownItems.map((item) => (
-                                <li key={item.name} className="Mobile-Navbar__item-list-item" onClick={item.action}>
+                            {notificationDropdownItems.map((item,index) => (
+                                <li key={`item.name:${index}`}  className="Mobile-Navbar__item-list-item" onClick={item.action}>
                                     {item.name}
                                 </li>
                             ))}
@@ -108,11 +115,11 @@ function MobileNavbar({
                         className="Mobile-Navbar__item"
                         data-test="Mobile-Navbar__item"
                         onClick={() => {
-                            toggle('PROFILE_DROPDOWN');
+                            toggle(MenuNames.ProfileDropdown);
                         }}
                     >
                         <span className="Mobile-Navbar__item-avatar" data-test="Mobile-Navbar__item-avatar">
-                            <Avatar alt="" src="avatar.svg" />
+                            <Avatar alt="avatar.svg" src={avatarSvg} />
                         </span>
                         <span className="Mobile-Navbar__item-text" data-test="Mobile-Navbar__item-text">
                             Logout
@@ -129,8 +136,8 @@ function MobileNavbar({
                         data-test="Mobile-Navbar__item-list"
                     >
                         <ul className="Mobile-Navbar__item-list-container">
-                            {profileDropdownItems.map((item) => (
-                                <li key={item.name} className="Mobile-Navbar__item-list-item" onClick={item.action}>
+                            {profileDropdownItems.map((item,index) => (
+                                <li key={`item.name:${index}`} className="Mobile-Navbar__item-list-item" onClick={item.action}>
                                     {item.name}
                                 </li>
                             ))}

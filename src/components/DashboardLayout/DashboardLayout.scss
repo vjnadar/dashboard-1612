@@ -14,11 +14,58 @@
         margin: 0%;
         padding: 0%;
     }
-    .Dashboard-Layout__sidebar-layout-container{
-        height:100%;
+    .Dashboard-Layout__sidebar-layout-container {
+        transform: translate(0, 0);
         width: 250px;
+        height: 100%;
+        opacity: 1;
+        transition: all 0.5s ease-out;
+    }
+    .Dashboard-Layout__sidebar-layout-container.transformation {
+        transform: translate(-260px, -260px);
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in;
     }
     .Dashboard-Layout__menu-layout-container {
         flex: 1;
+    }
+    @media (max-width: 796px) {
+        .Dashboard-Layout__menu-layout-container {
+            z-index: 2000;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    outline: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(160, 160, 160);
+    outline: none;
+}
+@media (max-width: 797px) {
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0);
+        border-radius: 8px;
+        outline: none;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(247, 247, 247);
+        outline: none;
     }
 }

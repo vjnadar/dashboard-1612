@@ -17,7 +17,7 @@ describe('this test-suite unit tests <Modal/>', () => {
     });
 });
 describe('this test-suite tests the behaviour of <Modal/>', () => {
-    it('should the state of <Modal/>, when open is true', () => {
+    it('should test <Modal/>, when open is true', () => {
         const modalCloseFn = jest.fn();
         const wrapper: Wrapper = createModalTestWrapper({ modalCloseFunction: modalCloseFn, arg: 'Mock_String' });
         const modalComp = findByDataTestAttribute(wrapper, 'Modal');

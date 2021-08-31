@@ -1,8 +1,9 @@
-import { createWrapper, findByDataTestAttribute } from '../../../../utilities';
-import { Wrapper } from '../../../../generalTypes';
-import { WrapperTypes } from '../../../../utilities/testFunctions/enums';
+import { createWrapper, findByClassAttribute, findByDataTestAttribute } from '../../../../utilities';
 import MobileNavbar from '.';
 import {profileDropdownItems,notificationDropdownItems} from '../data';
+import { Wrapper } from '../../../../generalTypes';
+import { WrapperTypes } from '../../../../utilities/testFunctions/enums';
+import {MenuNames} from '../enums';
 
 function createMobileNavbarTestWrapper({
     transformation,
@@ -135,7 +136,7 @@ describe('this test-suite tests the behaviour of <MobileNavbar/>', () => {
         });
         const toggleButton: Wrapper = findByDataTestAttribute(wrapper, 'Mobile-Navbar__item').at(0);
         toggleButton.simulate('click');
-        expect(mockToggle).toHaveBeenCalledWith('SEARCH_BAR');
+        expect(mockToggle).toHaveBeenCalledWith(MenuNames.Searchbar);
     });
     it('should test the toggle-button (toggle notification dropdown button) ,of <MobileNavbar/>.', () => {
         const mockToggle=jest.fn();
@@ -153,7 +154,7 @@ describe('this test-suite tests the behaviour of <MobileNavbar/>', () => {
         });
         const toggleButton: Wrapper = findByDataTestAttribute(wrapper, 'Mobile-Navbar__item').at(1);
         toggleButton.simulate('click');
-        expect(mockToggle).toHaveBeenCalledWith('NOTIFICATION_DROPDOWN');
+        expect(mockToggle).toHaveBeenCalledWith(MenuNames.NotificationDropdown);
     });
     it('should test the toggle-button (toggle profile dropdown button) ,of <MobileNavbar/>.', () => {
         const mockToggle=jest.fn();
@@ -171,6 +172,41 @@ describe('this test-suite tests the behaviour of <MobileNavbar/>', () => {
         });
         const toggleButton: Wrapper = findByDataTestAttribute(wrapper, 'Mobile-Navbar__item').at(2);
         toggleButton.simulate('click');
-        expect(mockToggle).toHaveBeenCalledWith('PROFILE_DROPDOWN');
+        expect(mockToggle).toHaveBeenCalledWith(MenuNames.ProfileDropdown);
+    });
+    it('should test the arrow of the profile dropdown button ,in <MobileNavbar/>.', () => {
+        const mockToggle=jest.fn();
+        const wrapper = createMobileNavbarTestWrapper({
+            transformation: false,
+            setTransformation: jest.fn(),
+            searchbarOpen: false,
+            toggle: mockToggle,
+            mobileNavVisibility: true,
+            setMobileNavVisibility: jest.fn(),
+            profileDropdownOpen: true,
+            notificationDropdownOpen: false,
+            profileDropdownItems ,
+            notificationDropdownItems,
+        });
+        const arrowDirection=findByClassAttribute(wrapper,"open");
+        expect(arrowDirection.length).toBe(1);
+    });
+    it('should test the arrow of the notification dropdown button ,in <MobileNavbar/>.', () => {
+        const mockToggle=jest.fn();
+        const wrapper = createMobileNavbarTestWrapper({
+            transformation: false,
+            setTransformation: jest.fn(),
+            searchbarOpen: false,
+            toggle: mockToggle,
+            mobileNavVisibility: true,
+            setMobileNavVisibility: jest.fn(),
+            profileDropdownOpen: false,
+            notificationDropdownOpen: true,
+            profileDropdownItems ,
+            notificationDropdownItems,
+        });
+        const arrowDirection=findByClassAttribute(wrapper,"open");
+        expect(arrowDirection.length).toBe(1);
     });
 });
+// Mobile-Navbar__item-arrow

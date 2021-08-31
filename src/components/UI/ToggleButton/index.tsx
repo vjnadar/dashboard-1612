@@ -1,5 +1,6 @@
 import React from 'react';
 import { ToggleButtonProps } from './types';
+import "./ToggleButton.scss";
 
 function ToggleButton({ transformation, setTransformation, dark }: ToggleButtonProps): JSX.Element {
     return (

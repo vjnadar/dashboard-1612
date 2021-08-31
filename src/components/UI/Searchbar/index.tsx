@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from '../Modal';
 import { SearchbarProps } from './types';
-import './Searchbar.css';
+import './Searchbar.scss';
 function Searchbar({ open, toggle }: SearchbarProps): JSX.Element {
     return (
         <>
