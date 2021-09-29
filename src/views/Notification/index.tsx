@@ -21,7 +21,7 @@ function Notification(): JSX.Element {
   return (
     <>
       <section className="Notification">
-        <h3 className="Notification__title">Notification</h3>
+        <h3 className="Notification__title">Alerts</h3>
         <div className="Notification__grid">
           <article className="Notification__notification1">
             <Card heading="Notification features" headingAlignment="left">

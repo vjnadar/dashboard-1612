@@ -90,7 +90,7 @@ function Navbar({ transformation, setTransformation, mobileView, location }: Nav
                 <Avatar
                   role="button"
                   aria-label="Search button"
-                  className="search-button"
+                  className="Navbar__item-search-button"
                   alt="search.svg"
                   src={searchSvg}
                   onClick={() => toggle("SEARCH_BAR")}

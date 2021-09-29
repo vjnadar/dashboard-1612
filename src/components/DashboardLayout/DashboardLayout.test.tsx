@@ -2,8 +2,13 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import { MenuNames } from "./Navbar/enums";
-import routes from "../../routes";
+// import routes from "../../routes";
 import DashboardLayout from ".";
+
+jest.mock("react-chartjs-2", () => ({
+  Bar: () => null,
+  Line: () => null
+}));
 
 describe("this test-suite unit tests <Sidebar/>", () => {
   beforeEach(() => {

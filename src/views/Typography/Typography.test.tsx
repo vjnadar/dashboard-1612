@@ -7,6 +7,6 @@ describe("this test-suite unit tests <Typography/>", () => {
     const label = screen.getAllByRole("presentation", { name: "Tag name" });
     expect(label).toHaveLength(16);
     const description = screen.getAllByRole("presentation", { name: "Description" });
-    expect(description).toBeInTheDocument();
+    expect(description).toHaveLength(16);
   });
 });

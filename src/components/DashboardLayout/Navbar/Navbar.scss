@@ -39,6 +39,10 @@
     .Navbar__item:focus {
         outline: none;
     }
+    .Navbar__item-search-button.MuiAvatar-root {
+        width: 37px !important;
+        height: 37px !important;
+    }
     .Navbar__route ul {
         display: flex;
         list-style: none;

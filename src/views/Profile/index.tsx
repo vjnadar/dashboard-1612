@@ -8,7 +8,7 @@ import "./Profile.scss";
 function Profile(): JSX.Element {
   return (
     <section className="Profile">
-      <h3 className="Profile__title">Profile</h3>
+      <h3 className="Profile__title">Sample Form & Card</h3>
       <div className="Profile__grid">
         <article className="Profile__grid-user-form">
           <Card heading="User details">

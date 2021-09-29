@@ -2,19 +2,19 @@ import { DropdownItems } from "./types";
 
 export const profileDropdownItems: DropdownItems[] = [
   {
-    name: "Vijay",
+    name: "Profile",
     action: (): void => {
       console.log("Vijay");
     }
   },
   {
-    name: "Benitta",
+    name: "Settings",
     action: (): void => {
       console.log("Benitta");
     }
   },
   {
-    name: "Agaran",
+    name: "Logout",
     action: (): void => {
       console.log("Agaran");
     },
