@@ -8,7 +8,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
   color: white;
-  font-size: 14px;
+  font-size: 12.95px;
   font-family: inherit;
 }
 .Footer__content {
@@ -23,11 +23,26 @@
 .Footer__content-link {
   width: 100%;
   text-decoration: none;
-  color: $quinary-color;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
 }
 .Footer__content-link:hover {
   color: $quaternary-color;
-  text-decoration: underline;
+}
+.Footer__company-name {
+  color: rgb(46, 103, 126);
+  font-weight: 700;
+}
+.Footer__company-name:hover {
+  color: $quinary-color;
+  border-bottom: 0.5px solid $quinary-color;
+}
+.Footer__rights {
+  font-weight: 600;
+}
+.Footer__copyright-year {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
 }
 @media (max-width: 1200px) {
   .Footer__content {

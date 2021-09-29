@@ -7,14 +7,13 @@ function Footer(): JSX.Element {
       <footer className="Footer">
         <nav>
           <ul className="Footer__content">
-            <li>© {new Date().getFullYear()}</li>
             <li>
               <a href="https://github.com/vjnadar" className="Footer__content-link">
-                {" "}
-                <span className="Footer__company-initials">Korkai Software</span>,
-              </a>{" "}
-              All Rights Reserved.
+                <span className="Footer__company-name">Korkai Software</span>
+              </a>
+              <span className="Footer__rights">, All Rights Reserved.</span>
             </li>
+            <li className="Footer__copyright-year">© {new Date().getFullYear()}&nbsp;</li>
           </ul>
         </nav>
       </footer>
