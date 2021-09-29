@@ -1,23 +1,23 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "outDir": "./build",
-        "rootDir": "./src",
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "noFallthroughCasesInSwitch": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": false,
-        "noEmit": false,
-        "jsx": "react-jsx",
-        "noImplicitAny": false
-    },
-    "include": ["src/App.tsx", "src/custom.d.ts"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "exclude": ["tsconfig.json"]
 }

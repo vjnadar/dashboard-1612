@@ -1,0 +1,14 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.Employees-Table {
+    width: 100%;
+    height: 100%;
+}
+.Employees-Table th,
+.Employees-Table tr,
+.Employees-Table td {
+    font-family: "Montserrat", sans-serif !important;
+    color: white !important;
+}
+.Employees-Table__Paper.MuiPaper-root {
+    background-color: $tertiary-color !important;
+}

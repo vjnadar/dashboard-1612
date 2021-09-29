@@ -1,0 +1,25 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.Table {
+    border-radius: none;
+    outline: none;
+
+    .Table__dropdown {
+        padding-left: 2px;
+    }
+    .Table__Cell-Header {
+        border-bottom: 0.5px solid rgb(32, 30, 30);
+        color: rgb(255, 255, 255);
+    }
+    .Table__Cell {
+        border-bottom: none;
+        color: rgb(255, 255, 255);
+    }
+}
+.Table th,
+.Table tr,
+.Table td {
+    font-family: "Montserrat", sans-serif !important;
+}
+.Table__paper.MuiPaper-root {
+    background-color: $tertiary-color !important;
+}

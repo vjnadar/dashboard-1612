@@ -1,10 +1,10 @@
-import './App.scss';
-import DashboardLayout from './components/DashboardLayout';
+import "./App.scss";
+import DashboardLayout from "./components/DashboardLayout";
 function App(): JSX.Element {
-    return (
-        <div data-test="App">
-            <DashboardLayout />
-        </div>
-    );
+  return (
+    <div>
+      <DashboardLayout />
+    </div>
+  );
 }
 export default App;

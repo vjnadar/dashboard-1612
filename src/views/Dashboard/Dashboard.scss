@@ -1,0 +1,90 @@
+@import "../../generalStyles/appBackgroundColors/";
+.Dashboard {
+    display: grid;
+    height: 95%;
+    width: 100%;
+    padding: 26px 0 30px 0;
+
+    background-color: $primary-color;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 0.8fr 1fr;
+    grid-template-areas:
+        "big-chart big-chart big-chart"
+        "small-chart1 small-chart2 small-chart3"
+        "table1 table2 table2";
+}
+.Dashboard__sales-chart-container {
+    grid-area: big-chart;
+    padding: 0 0 30px 0;
+}
+.Dashboard__income-chart-container {
+    grid-area: small-chart1;
+    padding: 0 30px 30px 0;
+}
+.Dashboard__expense-chart-container {
+    grid-area: small-chart2;
+    padding: 0 30px 30px 0;
+}
+.Dashboard__profit-chart-container {
+    grid-area: small-chart3;
+    padding: 0 0 30px 0;
+}
+.Dashboard__task-table-container {
+    grid-area: table1;
+    padding: 0 0 30px 0;
+    overflow: auto;
+}
+.Dashboard__employees-table-container {
+    grid-area: table2;
+    padding: 0 0 30px 30px;
+    overflow: auto;
+}
+.Dashboard__border {
+    border-radius: 5px;
+}
+@media (max-width: 800px) {
+    .Dashboard {
+        grid-template-columns: 100%;
+        grid-template-rows: 250px 250px 250px 250px 350px 350px;
+        grid-template-areas:
+            "big-chart"
+            "small-chart1"
+            "small-chart2"
+            "small-chart3"
+            "table1"
+            "table2";
+        column-gap: 20px;
+        row-gap: 20px;
+        height: 100%;
+        padding: 0 20px 0 0;
+        margin-left: 10px;
+        overflow: auto;
+    }
+    .Dashboard__sales-chart-container {
+        grid-area: big-chart;
+        padding: 0;
+    }
+    .Dashboard__income-chart-container {
+        grid-area: small-chart1;
+        padding: 0;
+    }
+    .Dashboard__expense-chart-container {
+        grid-area: small-chart2;
+        padding: 0;
+    }
+    .Dashboard__profit-chart-container {
+        grid-area: small-chart3;
+        padding: 0;
+    }
+    .Dashboard__task-table-container {
+        grid-area: table1;
+        padding: 0;
+    }
+    .Dashboard__employees-table-container {
+        grid-area: table2;
+        padding: 0;
+    }
+    .Dashboard__border {
+        border: 1.5px solid black;
+    }
+}

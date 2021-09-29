@@ -1,0 +1,55 @@
+@import "../../../generalStyles/appBackgroundColors/";
+
+.Chart-Card {
+    display: flex;
+    flex-direction: column;
+    background-color: $tertiary-color;
+    color: white;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    .Chart-Card__content {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .Chart-Card__content-title ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Chart-Card__chart-container {
+        background-color: inherit;
+        flex: 1;
+        border-radius: 5px;
+    }
+    .Chart-Card__content-main-heading {
+        padding: 4px 0 0 12px;
+    }
+    .Chard-Card__heading-text {
+        font-size: 12.9px;
+        font-weight: 600;
+        color: rgb(189, 189, 189);
+        padding: 12px 12px 12px 0;
+    }
+    .Chart-Card__content-sub-heading {
+        padding-left: 12px;
+    }
+    @media (max-width: 797px) {
+        .Chart-Card__chart-container {
+            height: 188.67px;
+        }
+        .Chart-Card__content-main-heading {
+            padding-left: 12px;
+        }
+        .Chard-Card__heading-text {
+            font-size: 12.9px;
+            font-weight: 600;
+            color: rgb(189, 189, 189);
+        }
+    }
+}

@@ -1,10 +1,11 @@
+@import "../../../generalStyles/appBackgroundColors/";
 .Navbar {
     display: flex;
     height: 80px;
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #1e1e2e;
+    background-color: $primary-color;
     color: antiquewhite;
     opacity: 1;
     z-index: 0;
@@ -30,6 +31,7 @@
     }
     .Navbar__item:first-child {
         cursor: pointer;
+        padding: 0 10px 0 10px;
     }
     .Navbar__item.toggle-mobile-navbar {
         padding-bottom: 11px;
@@ -37,8 +39,7 @@
     .Navbar__item:focus {
         outline: none;
     }
-
-    .Navbar__route-name ul {
+    .Navbar__route ul {
         display: flex;
         list-style: none;
         justify-content: center;
@@ -65,7 +66,7 @@
         transition: transform 0.5s ease-out;
         width: 100%;
     }
-    .Navbar__mobile-Nav-btn-icon.close {
+    .Navbar__mobile-Nav-btn-icon.close-slide-down {
         transform: translateX(100px);
         transition: transform 0.5s ease-in;
     }

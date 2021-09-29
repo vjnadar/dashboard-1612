@@ -1,0 +1,42 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.Notification-Card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 0 18px 18px 18px;
+    margin: 0 0 0 0;
+    height: auto;
+    width: auto;
+    background-color: $tertiary-color;
+    .Notification-Card__text {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+    .Notification-Card__text-heading {
+        font-size: 14px;
+        font-weight: 800;
+        padding: 2px;
+        margin: 10px;
+    }
+    .Notification-Card__text-sub-heading {
+        font-size: 12px;
+        padding: 0px;
+    }
+    .Notification-Card__content {
+        flex: 1;
+    }
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+@media (max-width: 1200px) {
+    .Notification-Card {
+        padding: 0;
+        background-color: none;
+    }
+}

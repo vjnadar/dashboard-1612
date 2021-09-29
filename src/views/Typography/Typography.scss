@@ -1,0 +1,219 @@
+.Typography {
+    display: flex;
+    flex-direction: column;
+    height: 97%;
+    margin: 0 0 0 0;
+    padding-right: 26px;
+    width: 100%;
+    .Typography__Title {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        grid-template-areas:
+            "header1 description1"
+            "header2 description2"
+            "header3 description3"
+            "header4 description4"
+            "header5 description5"
+            "header6 description6"
+            "para description7"
+            "quote description8"
+            "muted-text description9"
+            "primary-text description10"
+            "info-text description11"
+            "success-text description12"
+            "error-text description13"
+            "small-tag description14"
+            "lists description15"
+            "code description16";
+    }
+    .Typography__title-description {
+        margin: 0;
+        padding: 10px 0 30px 0;
+    }
+    .Typography__grid {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        row-gap: 10px;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header1 description1"
+            "header2 description2"
+            "header3 description3"
+            "header4 description4"
+            "header5 description5"
+            "header6 description6"
+            "para description7"
+            "quote description8"
+            "muted-text description9"
+            "primary-text description10"
+            "info-text description11"
+            "success-text description12"
+            "error-text description13"
+            "small-tag description14"
+            "lists description15"
+            "code description16";
+    }
+    .Typography__grid-header1 {
+        grid-area: header1;
+    }
+    .Typography__grid-header2 {
+        grid-area: header2;
+    }
+    .Typography__grid-header3 {
+        grid-area: header3;
+    }
+    .Typography__grid-header4 {
+        grid-area: header4;
+    }
+    .Typography__grid-header5 {
+        grid-area: header5;
+    }
+    .Typography__grid-header6 {
+        grid-area: header6;
+    }
+    .Typography__grid-para {
+        grid-area: para;
+    }
+    .Typography__grid-quote {
+        grid-area: quote;
+    }
+    .Typography__grid-muted-text {
+        grid-area: muted-text;
+    }
+    .Typography__grid-primary-text {
+        grid-area: primary-text;
+    }
+    .Typography__grid-info-text {
+        grid-area: info-text;
+    }
+    .Typography__grid-success-text {
+        grid-area: success-text;
+    }
+    .Typography__grid-error-text {
+        grid-area: error-text;
+    }
+    .Typography__grid-small-tag {
+        grid-area: small-tag;
+    }
+    .Typography__grid-lists {
+        grid-area: lists;
+    }
+    .Typography__grid-code {
+        grid-area: code;
+    }
+    .text-size {
+        font-size: 12px;
+    }
+    .Typography__grid-description1 {
+        grid-area: description1;
+    }
+    .Typography__grid-description2 {
+        grid-area: description2;
+    }
+    .Typography__grid-description3 {
+        grid-area: description3;
+    }
+    .Typography__grid-description4 {
+        grid-area: description4;
+    }
+    .Typography__grid-description5 {
+        grid-area: description5;
+    }
+    .Typography__grid-description6 {
+        grid-area: description6;
+    }
+    .Typography__grid-description7 {
+        grid-area: description7;
+    }
+    .Typography__grid-description8 {
+        grid-area: description8;
+    }
+    .Typography__grid-description9 {
+        grid-area: description9;
+    }
+    .Typography__grid-description10 {
+        grid-area: description10;
+    }
+    .Typography__grid-description11 {
+        grid-area: description11;
+    }
+    .Typography__grid-description12 {
+        grid-area: description12;
+    }
+    .Typography__grid-description13 {
+        grid-area: description13;
+    }
+    .Typography__grid-description14 {
+        grid-area: description14;
+    }
+    .Typography__grid-description16 {
+        grid-area: description16;
+    }
+    .Typography__grid-description17 {
+        grid-area: description17;
+    }
+    .Typography__grid-description15-list-flex {
+        display: flex;
+        gap: 50px;
+    }
+    .unstyled-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .inline-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 797px) {
+    .Typography {
+        margin: 10px;
+        padding: 10px;
+        overflow: auto;
+        .Typography__grid {
+            align-items: center;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "header1"
+                "description1"
+                "header2"
+                "description2"
+                "header3"
+                "description3"
+                "header4"
+                "description4"
+                "header5"
+                "description5"
+                "header6"
+                "description6"
+                "para"
+                "description7"
+                "quote"
+                "description8"
+                "muted-text"
+                "description9"
+                "primary-text"
+                "description10"
+                "info-text"
+                "description11"
+                "success-text"
+                "description12"
+                "error-text"
+                "description13"
+                "small-tag"
+                "description14"
+                "lists"
+                "description15"
+                "code"
+                "description16";
+        }
+    }
+}

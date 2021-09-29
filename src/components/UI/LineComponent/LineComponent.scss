@@ -1,0 +1,31 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.Line {
+    position: relative;
+    word-wrap: break-word;
+    background-color: inherit;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 16px;
+}
+.quote {
+    border: 1.5px solid $quaternary-color;
+    padding: 10px;
+    margin: 10px;
+}
+.error-line {
+    color: rgba(255, 10, 10, 0.9);
+    font-weight: 900;
+}
+.warning-line {
+    color: rgb(237, 241, 0);
+}
+.info-line {
+    color: rgb(0, 184, 240);
+}
+.success-line {
+    color: rgb(0, 134, 34);
+}
+.muted-line {
+    color: rgb(180, 180, 180);
+    font-weight: 900;
+}

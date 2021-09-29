@@ -1,3 +1,3 @@
-import { EmptyObject } from '..';
+import { EmptyObject } from "..";
 export type ReactProp = Record<string, unknown> | EmptyObject;
-export type ReactFC = (ReactProp) => JSX.Element;
+export type ReactFC = (reactProp: ReactProp) => JSX.Element;

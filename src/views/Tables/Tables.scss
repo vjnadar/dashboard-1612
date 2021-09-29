@@ -1,0 +1,22 @@
+.Tables {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin: 0;
+    padding-right: 26px;
+    height: 95%;
+    width: 100%;
+    .Tables__simple-table {
+        display: flex;
+        flex-direction: column;
+    }
+    .Tables__data-table {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 797px) {
+    .Tables {
+        margin-left: 10px;
+    }
+}

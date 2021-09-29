@@ -1,0 +1,33 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.Profile-Card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 50px 90px 90px 60px;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: $tertiary-color;
+    .Profile-Card__heading {
+        padding: 4px;
+    }
+}
+.Profile-Card.user-contact {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 90%;
+    gap: 20px;
+    border-radius: 0;
+}
+@media (max-width: 1300px) {
+    .Profile-Card {
+        width: 94%;
+        padding: 40px;
+        margin: 10px 10px 10px 15px;
+    }
+    .Profile-Card.user-contact {
+        margin: 10px 10px 10px 15px;
+    }
+}

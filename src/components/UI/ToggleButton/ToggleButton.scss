@@ -1,4 +1,3 @@
-// animation div cannot be inside the parent class
 .Toggle-Button {
     position: relative;
     display: flex;
@@ -21,7 +20,6 @@
 .Toggle-Button__burger.dark {
     background: rgb(0, 0, 0);
 }
-//creates an exact .Toggle-Button__burger div before and after the original .Toggle-Button__burger div
 .Toggle-Button__burger::before,
 .Toggle-Button__burger::after {
     content: "";
@@ -36,26 +34,19 @@
 .Toggle-Button__burger.dark::after {
     background: rgb(0, 0, 0);
 }
-//the imaginary .Toggle-Button_burger comes in from the top
 .Toggle-Button__burger::before {
     transform: translateY(-6px);
 }
-//the imaginary .Toggle-Button_burger come in from the bottom
 .Toggle-Button__burger::after {
     transform: translateY(6px);
 }
-/* ANIMATION */
-//sends the middle .Toggle-Button__burger(original) to the side
 .Toggle-Button.open .Toggle-Button__burger {
     transform: translateX(-50px);
     background: transparent;
-    // box-shadow: none;
 }
-//rotates and moves the imaginary .Toggle-Button_burger in the top diagonally
 .Toggle-Button.open .Toggle-Button__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
 }
-//rotates and moves the imaginary .Toggle-Button_burger in the bottom diagonally
 .Toggle-Button.open .Toggle-Button__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
 }

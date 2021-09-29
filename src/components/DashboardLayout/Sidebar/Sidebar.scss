@@ -1,9 +1,10 @@
+@import "../../../generalStyles/appBackgroundColors/";
 .Sidebar {
-    background-color: #2970f6;
+    background-color: $secondary-color;
     height: 96.5%;
     width: 230px;
     z-index: 500;
-    margin: 0 0 0px 20px;
+    margin: 0 10px 0px 20px;
     padding: 10px;
     color: white;
     border-radius: 5px;
@@ -22,6 +23,11 @@
         border-bottom: 0.5px solid rgb(204, 204, 204);
     }
     @media (max-width: 797px) {
+        .Sidebar {
+            margin: 1.3px;
+            width: 278.7px;
+            height: 100%;
+        }
         .Sidebar__title ul {
             padding: 15px;
         }

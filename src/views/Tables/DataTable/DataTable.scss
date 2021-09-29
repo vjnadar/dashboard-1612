@@ -1,0 +1,32 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.DataTable {
+    height: 400px;
+    width: 100%;
+    .DataTable__grid.MuiDataGrid-root {
+        background-color: $primary-color !important;
+        color: rgb(255, 255, 255);
+        border: none !important;
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 12.9px !important;
+    }
+    .DataTable__grid.MuiDataGrid-root tr {
+        border-bottom: none;
+    }
+    .DataTable__grid.MuiDataGrid-root input {
+        color: rgb(0, 0, 0);
+    }
+    .DataTable__grid.MuiDataGrid-root div,
+    .DataTable__grid.MuiButtonBase-root {
+        color: rgb(255, 255, 255) !important;
+    }
+    .DataTable__grid.MuiDataGrid-root button {
+        background-color: $primary-color !important;
+        color: rgb(255, 255, 255) !important;
+        font-weight: 900 !important;
+    }
+    .DataTable__grid.MuiDataGrid-root button:disabled {
+        background-color: $primary-color !important;
+        color: rgb(255, 255, 255) !important;
+        font-weight: 900 !important;
+    }
+}

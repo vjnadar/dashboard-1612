@@ -1,0 +1,258 @@
+@import "../../generalStyles/appBackgroundColors/";
+.Profile {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    .Profile__title {
+        padding: 3px;
+    }
+    .Profile__grid {
+        display: grid;
+        grid-template-columns: 2.8fr 1.2fr;
+        grid-template-rows: 4fr;
+        grid-template-areas: "user-form user-contact";
+    }
+    .Profile__grid-user-form {
+        grid-area: user-form;
+    }
+    .Profile__grid-user-contact {
+        grid-area: user-contact;
+    }
+    .Profile__grid-user-form-grid {
+        display: grid;
+        width: 100%;
+        color: white;
+        margin: 0;
+        font-family: inherit;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+        grid-template-areas:
+            "company-name username email-id"
+            "name name name"
+            "address address address"
+            "city country postal-code"
+            "about-me about-me ."
+            "save-btn save-btn .";
+    }
+    .Profile__grid-user-form-grid input {
+        height: 35px;
+        padding: 4px;
+        margin: 4px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1.35px solid $quaternary-color;
+        color: $quinary-color;
+        font-weight: 400;
+        background-color: $primary-color;
+    }
+    .Profile__grid-user-form-grid input:focus {
+        outline: none;
+        color: $primary-color;
+        caret-color: $primary-color;
+        font-weight: 600;
+        border: 2px solid $primary-color;
+        background-color: $quaternary-color;
+    }
+    .Profile__grid-user-form-grid input:disabled {
+        border: 2.5px solid $primary-color;
+        background-color: $quaternary-color;
+        font-weight: 700;
+    }
+    .Profile__grid-user-form-grid textarea {
+        height: 55px;
+        padding: 4px;
+        margin: 4px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1.35px solid $quaternary-color;
+        color: $quinary-color;
+        font-weight: 400;
+        background-color: $primary-color;
+    }
+    .Profile__grid-user-form-grid textarea:focus {
+        outline: none;
+        color: $primary-color;
+        caret-color: $primary-color;
+        font-weight: 600;
+        border: 1.5px solid $primary-color;
+        background-color: $quaternary-color;
+    }
+    .Profile__grid-user-form-grid label {
+        font-size: 12px;
+        padding: 2px;
+    }
+    .Profile__grid-user-form-grid-account-info-company {
+        grid-area: company-name;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-account-info-username {
+        grid-area: username;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-account-info-email-id {
+        grid-area: email-id;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-name {
+        grid-area: name;
+        display: flex;
+    }
+    .Profile__grid-user-form-grid-emp-first-name {
+        flex: 0.5;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-last-name {
+        flex: 0.5;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-address {
+        grid-area: address;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-city {
+        grid-area: city;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-country {
+        grid-area: country;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-postal-code {
+        grid-area: postal-code;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-emp-about-me {
+        grid-area: about-me;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-form-grid-save {
+        grid-area: save-btn;
+        margin: 27px 0 0 0;
+        background-color: $primary-color;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        width: 441.46px;
+        height: 44px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        transform: translate(0, 0);
+        transition: transform 0.1s ease-in;
+    }
+    .Profile__grid-user-form-grid-save:hover {
+        transform: translate(0, -2px);
+        background-color: $quinary-color;
+        color: $primary-color;
+        transition: transform 0.1s ease-in;
+    }
+    .Profile__grid-user-form-grid-save:focus {
+        outline: none;
+        border: 3.5px solid $secondary-color;
+    }
+    .Profile__grid-user-form-element {
+        display: flex;
+        flex-direction: column;
+    }
+    .Profile__grid-user-contact {
+        margin-left: 26px;
+    }
+    .Profile__grid-user-contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Profile__grid-user-contact-avatar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 6px;
+        background: $secondary-color;
+    }
+    .Profile__grid-user-contact-details-name {
+        font-size: 12px;
+        font-weight: 900;
+    }
+    .Profile__grid-user-contact-details-designation {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .Profile__grid-user-contact-description {
+        font-size: 16px;
+        padding: 2px;
+        margin: 2px;
+    }
+    .Profile__grid-user-contact-avatar-icon.MuiAvatar-root {
+        width: 120px;
+        height: 120px;
+    }
+    .Profile__grid-user-contact-share-buttons {
+        display: flex;
+    }
+    .Profile__grid-user-contact-share-buttons button {
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        border: none;
+        padding: 4px;
+        margin: 2px;
+        background-color: $quaternary-color;
+    }
+    .Profile__grid-user-contact-share-buttons button:hover {
+        background-color: $quinary-color;
+    }
+    .Profile__grid-user-contact-share-buttons-icon.MuiSvgIcon-root {
+        width: 19.7px;
+        height: 19.7px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .Profile {
+        overflow: auto;
+        .Profile__grid {
+            margin: 0;
+            padding: 0;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "user-form"
+                "user-contact";
+        }
+        .Profile__grid-user-contact {
+            margin-top: 26px;
+        }
+        .Profile__grid-user-form-grid {
+            justify-content: center;
+            margin: 0 10px 10px 0;
+            grid-template-columns: 4fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "company-name"
+                "username"
+                "email-id"
+                "name"
+                "address"
+                "city"
+                "country"
+                "postal-code"
+                "about-me"
+                "save-btn";
+        }
+        .Profile__grid-user-form-grid-emp-name {
+            flex-direction: column;
+        }
+        .Profile__grid-user-contact-share-buttons {
+            padding: 8px;
+        }
+    }
+}

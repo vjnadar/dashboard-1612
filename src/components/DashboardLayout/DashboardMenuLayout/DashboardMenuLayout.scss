@@ -1,8 +1,17 @@
 .Dashboard-Menu-Layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    width: calc(100vw - 280px);
     color: white;
-    margin: 2px;
-    padding: 2px;
-    width: 100%;
-    height: 90%;
-    overflow-x: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    z-index: 1;
+}
+@media (max-width: 797px) {
+    .Dashboard-Menu-Layout {
+        height: calc(100vh - 80px);
+        width: 100vw;
+    }
 }

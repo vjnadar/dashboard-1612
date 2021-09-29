@@ -1,0 +1,14 @@
+@import "../../../generalStyles/appBackgroundColors/";
+.SimpleTable-Paper.MuiPaper-root {
+    background-color: $tertiary-color !important;
+}
+.SimpleTable {
+    min-width: 650px;
+    border: 1.5px solid rgb(85, 85, 85);
+}
+.SimpleTable th,
+.SimpleTable tr,
+.SimpleTable td {
+    color: rgb(255, 255, 255);
+    border: 1.5px solid #1e1e2e;
+}

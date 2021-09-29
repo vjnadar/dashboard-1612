@@ -1,48 +1,45 @@
-import * as React from 'react';
-import { createWrapper, findByDataTestAttribute, findByClassAttribute } from '../../../utilities';
-import { Wrapper } from '../../../generalTypes';
-import { WrapperTypes } from '../../../utilities/testFunctions/enums';
-import Navbar from '.';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { MenuNames } from "./enums";
+import Navbar from ".";
 
-describe('this test-suite unit tests <Navbar/>', () => {
-    let wrapper: Wrapper;
-    beforeEach(() => {
-        wrapper = createWrapper(Navbar, WrapperTypes.Shallow);
-    });
-    it('should check if <Navbar/> renders properly', () => {
-        const navbar: Wrapper = findByDataTestAttribute(wrapper, 'Navbar');
-        expect(navbar.length).toBe(1);
-    });
-    it('should check if the navbar__route-name div of <Navbar/> render properly', () => {
-        const routeName: Wrapper = findByDataTestAttribute(wrapper, 'Navbar__route-name');
-        expect(routeName.length).toBe(1);
-    });
-    it('should check if the navbar__items div of <Navbar/> render properly', () => {
-        const navbarItems: Wrapper = findByDataTestAttribute(wrapper, 'Navbar__items');
-        expect(navbarItems.length).toBe(1);
-    });
-    it('should check if the list items of navbar__items ,in the <Navbar/>, render properly', () => {
-        const navbarItem: Wrapper = findByDataTestAttribute(wrapper, 'Navbar__item');
-        expect(navbarItem.length).toBe(3);
-    });
+describe("this test-suite unit tests <Navbar/> when mobile view is false", () => {
+  beforeEach(() => {
+    render(<Navbar transformation={false} setTransformation={jest.fn()} mobileView={false} location={"/dashboard"} />);
+  });
+  it("should check if the sections of <Navbar/> render properly, when mobile view is false", () => {
+    const navbar = screen.getByRole("navigation", { name: "Main menu bar" });
+    expect(navbar).toBeInTheDocument();
+    const toggleButton = screen.getByRole("listitem", { name: "Toggle button section" });
+    expect(toggleButton).toBeInTheDocument();
+    const routeName = screen.getByRole("listitem", { name: "Selected route" });
+    expect(routeName).toHaveTextContent("DASHBOARD");
+    const searchBtnImg = screen.getByRole("listitem", { name: "Search bar open button" });
+    expect(searchBtnImg).toBeInTheDocument();
+    const notificationDropdown = screen.getByRole("listbox", { name: "Notification dropdown" });
+    expect(notificationDropdown).toBeInTheDocument();
+    const userProfileDropdown = screen.getByRole("listbox", { name: "User profile dropdown" });
+    expect(userProfileDropdown).toBeInTheDocument();
+    const profileImage = screen.getByRole("image", { name: `${MenuNames.ProfileDropdown}_IMAGE` });
+    expect(profileImage).toBeInTheDocument();
+    const notificationImage = screen.getByRole("image", { name: `${MenuNames.NotificationDropdown}_IMAGE` });
+    expect(notificationImage).toBeInTheDocument();
+  });
 });
-describe('this test-suite tests the behaviour of <Navbar/>', () => {
-    function createNavbarTestWrapper({ transformation, setTransformation, mobileView },WrapperType): Wrapper {
-        return createWrapper(Navbar, WrapperType, { transformation, setTransformation, mobileView });
-    }
-    it('should test the number of Navbar-items,in <Navbar/>, when mobileview is false', () => {
-        const wrapper = createNavbarTestWrapper({ transformation: false, setTransformation: jest.fn(), mobileView: false },WrapperTypes.Shallow);
-        const navbarItem: Wrapper = findByDataTestAttribute(wrapper, 'Navbar__item');
-        expect(navbarItem.length).toBe(3);
-    });
-    it('should test the number of Navbar-items,in <Navbar/>, when mobileview is true', () => {
-        const wrapper = createNavbarTestWrapper({ transformation: false, setTransformation: jest.fn(), mobileView: true },WrapperTypes.Shallow);
-        const navbarItem: Wrapper = findByDataTestAttribute(wrapper, 'Navbar__item');
-        expect(navbarItem.length).toBe(1);
-    });
-    it('should test if Navbar__mobile-Nav-btn-icon ,in <Navbar/>, becomes Navbar__mobile-Nav-btn-icon close when transformation is true', () => {
-        const wrapper = createNavbarTestWrapper({ transformation: false, setTransformation: jest.fn(), mobileView: true },WrapperTypes.Shallow);
-        const navbarMobile: Wrapper = findByClassAttribute(wrapper, 'close');
-        expect(navbarMobile.length).toBe(1);
-    });
+describe("this test-suite unit tests <Navbar/> when mobile view is true", () => {
+  beforeEach(() => {
+    render(<Navbar transformation={false} setTransformation={jest.fn()} mobileView={true} location={"/dashboard"} />);
+  });
+  it("should check if the sections of <Navbar/> render properly, when mobile view is true", () => {
+    const navbar = screen.getByRole("navigation", { name: "Main menu bar" });
+    expect(navbar).toBeInTheDocument();
+    const toggleButton = screen.getAllByRole("button", { name: "Toggle button" });
+    expect(toggleButton).toHaveLength(2);
+    const searchbarSection = screen.getAllByRole("alert", { name: "Search textbox container" });
+    expect(searchbarSection).not.toHaveLength(2);
+    const mobileViewNavigationBar = screen.getByRole("alert", { name: "Mobile main menu bar dropdown" });
+    expect(mobileViewNavigationBar).toBeInTheDocument();
+    const mobileNavigationbarOpenButton = screen.queryByRole("button", { name: "Mobile main menubar open button" });
+    expect(mobileNavigationbarOpenButton).toBeInTheDocument();
+  });
 });

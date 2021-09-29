@@ -1,3 +1,3 @@
-import { DashboardRoutes } from '../../../../routes/types';
+import { DashboardRoutes } from "../../../../routes/types";
 
-export type SideBarProps = { dashboardRoutes: DashboardRoutes[] };
+export type SideBarProps = { dashboardRoutes: DashboardRoutes[]; location: string };
