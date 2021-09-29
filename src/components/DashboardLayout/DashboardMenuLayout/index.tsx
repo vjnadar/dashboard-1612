@@ -22,8 +22,8 @@ function DashboardMenuLayout({ dashboardRoutes }: DashboardMenuLayoutProps): JSX
           ))}
         </Switch>
         <Redirect from="/" to={dashboardRoutes[0].path} />
+        <Footer />
       </Suspense>
-      <Footer />
     </div>
   );
 }

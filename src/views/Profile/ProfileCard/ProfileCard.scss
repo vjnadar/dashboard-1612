@@ -31,3 +31,13 @@
         margin: 10px 10px 10px 15px;
     }
 }
+@media (max-width: 797px) {
+    .Profile-Card {
+        width: 94%;
+        padding: 10px;
+        margin: 10px;
+    }
+    .Profile-Card.user-contact {
+        margin: 10px 10px 10px 15px;
+    }
+}

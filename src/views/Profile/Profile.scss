@@ -222,7 +222,7 @@
         .Profile__grid {
             margin: 0;
             padding: 0;
-            grid-template-columns: 100%;
+            grid-template-columns: 4fr;
             grid-template-rows: auto;
             grid-template-areas:
                 "user-form"
@@ -235,6 +235,45 @@
             justify-content: center;
             margin: 0 10px 10px 0;
             grid-template-columns: 4fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "company-name"
+                "username"
+                "email-id"
+                "name"
+                "address"
+                "city"
+                "country"
+                "postal-code"
+                "about-me"
+                "save-btn";
+        }
+        .Profile__grid-user-form-grid-emp-name {
+            flex-direction: column;
+        }
+        .Profile__grid-user-contact-share-buttons {
+            padding: 8px;
+        }
+    }
+}
+@media (max-width: 497px) {
+    .Profile {
+        overflow: auto;
+        .Profile__grid {
+            margin: 0;
+            padding: 0;
+            grid-template-columns: 0.01fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "user-form"
+                "user-contact";
+        }
+        .Profile__grid-user-contact {
+            margin-top: 26px;
+        }
+        .Profile__grid-user-form-grid {
+            margin: 0 10px 10px 0;
+            grid-template-columns: 0.1fr;
             grid-template-rows: auto;
             grid-template-areas:
                 "company-name"
