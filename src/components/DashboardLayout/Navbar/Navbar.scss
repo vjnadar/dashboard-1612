@@ -63,11 +63,13 @@
         transform: translateX(0);
         margin: 15px 0 0 0;
         flex: 1;
+        visibility: visible;
         transition: transform 0.5s ease-out;
         width: 100%;
     }
     .Navbar__mobile-Nav-btn-icon.close-slide-down {
-        transform: translateX(100px);
+        visibility: collapse;
+        transform: translateX(1000px);
         transition: transform 0.5s ease-in;
     }
 }
