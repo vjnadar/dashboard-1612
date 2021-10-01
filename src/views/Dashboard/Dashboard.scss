@@ -4,7 +4,7 @@
     height: 95%;
     width: 100%;
     padding: 26px 0 30px 0;
-
+    overflow: auto;
     background-color: $primary-color;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.2fr 0.8fr 1fr;
@@ -42,7 +42,7 @@
 .Dashboard__border {
     border-radius: 5px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .Dashboard {
         grid-template-columns: 100%;
         grid-template-rows: 250px 250px 250px 250px 350px 350px;
@@ -58,7 +58,6 @@
         height: 100%;
         padding: 0 20px 0 0;
         margin-left: 10px;
-        overflow: auto;
     }
     .Dashboard__sales-chart-container {
         grid-area: big-chart;
