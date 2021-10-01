@@ -3,9 +3,10 @@
 A Dashboard template built using ReactJS and Typescript!.
 
 **Key features**
+
 - React JS
 - Typescript
-- Jest/Enzyme
+- Jest/ React Testing Library
 - ESLint
 - Sass
 - Material Icons

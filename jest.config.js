@@ -4,7 +4,6 @@ module.exports = {
   collectCoverageFrom: ["src/**/*.{ts,tsx,mjs}"],
   coverageDirectory: "coverage",
   moduleFileExtensions: ["js", "ts", "json", "tsx"],
-  setupFiles: ["<rootDir>/enzyme.config.js"],
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
   testEnvironment: "jsdom",
   testMatch: ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)", "**/__tests__/**/*.js?(x)", "**/?(*.)+(spec|test).js?(x)"],
