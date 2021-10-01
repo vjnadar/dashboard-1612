@@ -138,21 +138,21 @@
     .Profile__grid-user-form-grid-save {
         grid-area: save-btn;
         margin: 27px 0 0 0;
-        background-color: $primary-color;
+        background-color: #004594;
         color: rgb(255, 255, 255);
         font-weight: 600;
         width: 441.46px;
         height: 44px;
         font-size: 16px;
         border: none;
-        border-radius: 8px;
+        border-radius: 5px;
         transform: translate(0, 0);
         transition: transform 0.1s ease-in;
     }
     .Profile__grid-user-form-grid-save:hover {
         transform: translate(0, -2px);
-        background-color: $quinary-color;
-        color: $primary-color;
+        // background-color: $primary-color;
+        // color: $quinary-color;
         transition: transform 0.1s ease-in;
     }
     .Profile__grid-user-form-grid-save:focus {
@@ -177,6 +177,7 @@
         width: 100%;
         padding: 6px;
         background: $secondary-color;
+        border-radius: 5px;
     }
     .Profile__grid-user-contact-details-name {
         font-size: 12px;
@@ -229,7 +230,7 @@
                 "user-contact";
         }
         .Profile__grid-user-contact {
-            margin-top: 26px;
+            margin: 26px 0 0 0;
         }
         .Profile__grid-user-form-grid {
             justify-content: center;
@@ -251,18 +252,22 @@
         .Profile__grid-user-form-grid-emp-name {
             flex-direction: column;
         }
+        .Profile__grid-user-form-grid-save {
+            width: auto;
+        }
         .Profile__grid-user-contact-share-buttons {
             padding: 8px;
         }
     }
 }
-@media (max-width: 497px) {
+@media (max-width: 540px) {
     .Profile {
         overflow: auto;
+        width: 94%;
         .Profile__grid {
             margin: 0;
             padding: 0;
-            grid-template-columns: 0.01fr;
+            grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-template-areas:
                 "user-form"
@@ -272,8 +277,9 @@
             margin-top: 26px;
         }
         .Profile__grid-user-form-grid {
+            justify-content: space-between;
             margin: 0 10px 10px 0;
-            grid-template-columns: 0.1fr;
+            grid-template-columns: 1fr;
             grid-template-rows: auto;
             grid-template-areas:
                 "company-name"
@@ -286,6 +292,17 @@
                 "postal-code"
                 "about-me"
                 "save-btn";
+        }
+        .Profile__grid-user-form-grid input {
+            width: auto;
+            margin-left: 2px;
+        }
+        .Profile__grid-user-form-grid textarea {
+            width: auto;
+            margin-left: 2px;
+        }
+        .Profile__grid-user-form-grid-save {
+            width: auto;
         }
         .Profile__grid-user-form-grid-emp-name {
             flex-direction: column;
