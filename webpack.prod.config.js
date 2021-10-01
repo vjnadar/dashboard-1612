@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: "bundle-[name].[contenthash].js",
     path: path.resolve(__dirname, "./build"),
-    publicPath: ""
+    publicPath: "/"
   },
   mode: "production",
   module: {
