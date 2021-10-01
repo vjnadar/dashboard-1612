@@ -22,9 +22,8 @@
         transition: all 0.5s ease-out;
     }
     .Dashboard-Layout__sidebar-layout-container.transformation {
-        transform: translate(-260px, -260px);
+        transform: translate(-260px, 0);
         width: 0;
-        height: 0;
         opacity: 0;
         transition: all 0.5s ease-in;
     }
