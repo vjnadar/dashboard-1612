@@ -48,12 +48,12 @@ function Notification(): JSX.Element {
           </article>
           <article className="Notification__notification2">
             <Card heading="Notification types" headingAlignment="left">
-              <Alert>This is the default notification(in this case, the color-prop is not set)!</Alert>
-              <Alert color="error">This is a error notification(in this case, the color-prop is to error)!</Alert>
-              <Alert color="warning">This is a warning notification(in this case, the color-prop is to warning)!</Alert>
-              <Alert color="info">This is a informational notification(in this case, the color-prop is to info)!</Alert>
-              <Alert color="success">This is a success notification(in this case, the color-prop is to success)!</Alert>
-              <Alert color="dark">This is a notification using a dark background color(in this case, the color-prop is to success)!</Alert>
+              <Alert>This is the default notification(in this case, the color-prop is set not set)!</Alert>
+              <Alert color="error">This is a error notification(in this case, the color-prop is set to error)!</Alert>
+              <Alert color="warning">This is a warning notification(in this case, the color-prop is set to warning)!</Alert>
+              <Alert color="info">This is a informational notification(in this case, the color-prop is set to info)!</Alert>
+              <Alert color="success">This is a success notification(in this case, the color-prop is set to success)!</Alert>
+              <Alert color="dark">This is a notification using a dark background color(in this case, the color-prop is set to success)!</Alert>
             </Card>
           </article>
           <article className="Notification__positioned-snackbar">
