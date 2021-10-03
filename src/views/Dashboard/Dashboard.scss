@@ -7,7 +7,7 @@
     overflow: auto;
     background-color: $primary-color;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1.2fr 0.8fr 1fr;
+    grid-template-rows: 1.334fr 1.334fr 1.334fr;
     grid-template-areas:
         "big-chart big-chart big-chart"
         "small-chart1 small-chart2 small-chart3"
