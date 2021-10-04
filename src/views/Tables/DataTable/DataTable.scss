@@ -29,4 +29,7 @@
         color: rgb(255, 255, 255) !important;
         font-weight: 900 !important;
     }
+    .DataTable.MuiDataGrid-root .MuiDataGrid-iconSeparator {
+        display: none;
+    }
 }
