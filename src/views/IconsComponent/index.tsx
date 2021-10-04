@@ -6,7 +6,7 @@ function IconsComponent(): JSX.Element {
   console.log(Object.keys(Icons).length);
   return (
     <div className="Icons-Component">
-      <h3>Material-UI Icons</h3>
+      <h3 className="Icons-Component__title">Material-UI Icons</h3>
       <div className="Icons-Component__grid">
         {Object.keys(Icons)
           .slice(Math.floor(Math.random() * 1000) + 900, 2000)

@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    padding: 50px 90px 90px 60px;
-    height: 100%;
-    width: 100%;
+    padding: auto;
+    height: auto;
+    width: auto;
     color: rgb(255, 255, 255);
     background-color: $tertiary-color;
     .Profile-Card__heading {
@@ -16,16 +16,16 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    height: 100%;
-    width: 90%;
+    height: auto;
+    width: auto;
     gap: 20px;
     border-radius: 5px;
 }
 @media (max-width: 1300px) {
     .Profile-Card {
         width: auto;
-        padding: 40px;
-        margin: 10px 10px 10px 15px;
+        padding: auto;
+        margin: auto;
     }
     .Profile-Card.user-contact {
         margin: 10px 10px 10px 15px;

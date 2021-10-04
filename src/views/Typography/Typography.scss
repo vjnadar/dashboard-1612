@@ -4,28 +4,11 @@
     height: 97%;
     margin: 0 0 0 0;
     padding-right: 26px;
+    padding-top: 5px;
     width: 100%;
     .Typography__Title {
         display: flex;
         flex-direction: column;
-        padding: 100px;
-        grid-template-areas:
-            "header1 description1"
-            "header2 description2"
-            "header3 description3"
-            "header4 description4"
-            "header5 description5"
-            "header6 description6"
-            "para description7"
-            "quote description8"
-            "muted-text description9"
-            "primary-text description10"
-            "info-text description11"
-            "success-text description12"
-            "error-text description13"
-            "small-tag description14"
-            "lists description15"
-            "code description16";
     }
     .Typography__title-description {
         margin: 0;
@@ -214,6 +197,10 @@
                 "description15"
                 "code"
                 "description16";
+        }
+        .Typography__grid-description15-list-flex {
+            flex-direction: column;
+            gap: 10px;
         }
     }
 }

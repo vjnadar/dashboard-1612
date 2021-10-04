@@ -3,8 +3,10 @@
     height: 100%;
     width: 100%;
     margin: 0 0 0 0;
+    padding-top: 5px;
     .Profile__title {
-        padding: 3px;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
     }
     .Profile__grid {
         display: grid;
@@ -198,6 +200,7 @@
     }
     .Profile__grid-user-contact-share-buttons {
         display: flex;
+        padding: 20px;
     }
     .Profile__grid-user-contact-share-buttons button {
         border-radius: 50%;
@@ -220,6 +223,9 @@
 @media (max-width: 1300px) {
     .Profile {
         overflow: auto;
+        .Profile__title {
+            padding-left: 5px;
+        }
         .Profile__grid {
             margin: 0;
             padding: 0;
@@ -248,6 +254,12 @@
                 "postal-code"
                 "about-me"
                 "save-btn";
+        }
+        .Profile__grid-user-form-grid input {
+            width: auto;
+        }
+        .Profile__grid-user-form-grid textarea {
+            width: auto;
         }
         .Profile__grid-user-form-grid-emp-name {
             flex-direction: column;

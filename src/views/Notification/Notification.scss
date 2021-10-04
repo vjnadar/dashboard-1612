@@ -2,12 +2,12 @@
 
 .Notification {
     margin: 0;
-    padding: 0;
+    padding-top: 5px;
     height: 100%;
     width: 100%;
     .Notification__title {
-        margin: 10px;
-        padding: 6px;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
     }
     .Notification__grid {
         display: grid;
