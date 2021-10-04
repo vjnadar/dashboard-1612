@@ -1,7 +1,6 @@
-import { lazy, LazyExoticComponent } from "react";
+import { lazy, LazyExoticComponent, MemoExoticComponent } from "react";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import MapIcon from "@material-ui/icons/Map";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ProfileIcon from "@material-ui/icons/Face";
 import TableIcon from "@material-ui/icons/TableChart";
@@ -10,7 +9,7 @@ import { ReactFC } from "../generalTypes";
 import { DashboardRoutes } from "./types";
 
 const Dashboard: LazyExoticComponent<ReactFC> = lazy(() => import("../views/Dashboard"));
-const IconsComponent: LazyExoticComponent<ReactFC> = lazy(() => import("../views/IconsComponent"));
+const IconsComponent: LazyExoticComponent<MemoExoticComponent<() => JSX.Element>> = lazy(() => import("../views/IconsComponent"));
 const Notification: LazyExoticComponent<ReactFC> = lazy(() => import("../views/Notification"));
 const Profile: LazyExoticComponent<ReactFC> = lazy(() => import("../views/Profile"));
 const Tables: LazyExoticComponent<ReactFC> = lazy(() => import("../views/Tables"));
