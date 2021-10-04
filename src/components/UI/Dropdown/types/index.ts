@@ -9,4 +9,5 @@ export type DropdownProps = {
   large?: boolean;
   small?: boolean;
   hideDropdownArrowIcon?: boolean;
+  modal?: boolean;
 };

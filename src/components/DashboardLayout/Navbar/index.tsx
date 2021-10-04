@@ -104,6 +104,7 @@ function Navbar({ transformation, setTransformation, mobileView, location }: Nav
                   dropdownName={MenuNames.NotificationDropdown}
                   avatarImgSrc={notificationSvg}
                   large={true}
+                  modal
                 />
               </li>
               <li className="Navbar__item" role="listbox" aria-label="User profile dropdown" aria-required aria-expanded={profileDropdownOpen}>
@@ -113,6 +114,7 @@ function Navbar({ transformation, setTransformation, mobileView, location }: Nav
                   setOpen={toggle}
                   dropdownName={MenuNames.ProfileDropdown}
                   avatarImgSrc={avatarSvg}
+                  modal
                 />
               </li>
             </ul>
