@@ -223,6 +223,7 @@
 @media (max-width: 1300px) {
     .Profile {
         overflow: auto;
+        width: auto;
         .Profile__title {
             padding-left: 5px;
         }
@@ -274,8 +275,6 @@
 }
 @media (max-width: 540px) {
     .Profile {
-        overflow: auto;
-        width: 94%;
         .Profile__grid {
             margin: 0;
             padding: 0;

@@ -43,6 +43,9 @@
         .Icons-Component__title {
             padding-left: 10px;
         }
+        .Icons-Component__row-element {
+            width: auto;
+        }
         .Icons-Component__grid {
             grid-template-columns: 4fr;
             grid-template-rows: auto;
