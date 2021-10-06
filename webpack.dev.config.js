@@ -19,6 +19,7 @@ module.exports = {
     index: "index.html",
     port: 3000
   },
+  devtool: "source-map",
   module: {
     rules: [
       {

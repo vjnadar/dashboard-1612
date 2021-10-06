@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -12,8 +12,11 @@ function DashboardLayout(): JSX.Element {
   const location: string = useLocation().pathname;
   const [transformation, setTransformation] = useState(false);
   const [mobileView, setMobileView] = useState(false);
-
-  React.useEffect(() => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  useEffect(() => {
     if (width < 796 && !mobileView) {
       setMobileView(true);
       setTransformation(true);
@@ -22,13 +25,17 @@ function DashboardLayout(): JSX.Element {
       setMobileView(false);
     }
   }, [width, transformation, mobileView]);
+  const transformationAnimationClassName =
+    width > 796 && mounted
+      ? "Dashboard-Layout__sidebar-layout-container transformation"
+      : "Dashboard-Layout__sidebar-layout-container transformation mobile-view";
   return (
     <main className="Dashboard-Layout">
       <section>
         <Navbar transformation={transformation} setTransformation={setTransformation} mobileView={mobileView} location={location} />
       </section>
       <ul className="Dashboard-Layout__container">
-        <li className={!transformation ? "Dashboard-Layout__sidebar-layout-container" : "Dashboard-Layout__sidebar-layout-container transformation"}>
+        <li className={!transformation ? "Dashboard-Layout__sidebar-layout-container" : transformationAnimationClassName}>
           <Sidebar dashboardRoutes={dashboardRoutes} location={location} />
         </li>
         <li className="Dashboard-Layout__menu-layout-container">

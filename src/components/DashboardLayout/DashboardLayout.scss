@@ -22,10 +22,13 @@
         transition: all 0.5s ease-out;
     }
     .Dashboard-Layout__sidebar-layout-container.transformation {
-        transform: translate(-260px, 0);
+        transform: translate(-280px, 0);
         width: 0;
         opacity: 0;
         transition: all 0.5s ease-in;
+    }
+    .Dashboard-Layout__sidebar-layout-container.transformation.mobile-view {
+        transform: translate(0, -2000px);
     }
     .Dashboard-Layout__menu-layout-container {
         flex: 1;
