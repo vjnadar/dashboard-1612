@@ -1,4 +1,3 @@
-import React from "react";
 import SimpleTable from "./SimpleTable";
 import DataTable from "./DataTable";
 import "./Tables.scss";

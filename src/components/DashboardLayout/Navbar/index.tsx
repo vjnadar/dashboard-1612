@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { ToggleButton } from "../../UI";
 import { Dropdown } from "../../UI";
 import Avatar from "@material-ui/core/Avatar";
@@ -13,7 +12,6 @@ import { MenuNames } from "./enums";
 import avatarSvg from "../../../assets/navbar-icons/avatar.svg";
 import notificationSvg from "../../../assets/navbar-icons/notification.svg";
 import searchSvg from "../../../assets/navbar-icons/search.svg";
-
 import "./Navbar.scss";
 
 function Navbar({ transformation, setTransformation, mobileView, location }: NavbarProps): JSX.Element {

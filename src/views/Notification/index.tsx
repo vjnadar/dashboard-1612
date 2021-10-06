@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Alert } from "../../components/UI";
 import Card from "./NotificationCard";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Close } from "@material-ui/icons";
 import { AlertProps } from "./types";
 import "./Alert.scss";

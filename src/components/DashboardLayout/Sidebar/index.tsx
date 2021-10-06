@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
-import { useLocation } from "react-router-dom";
 import { SideBarProps } from "./types";
 import "./Sidebar.scss";
 

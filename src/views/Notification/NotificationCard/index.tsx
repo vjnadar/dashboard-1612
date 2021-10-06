@@ -1,4 +1,3 @@
-import React from "react";
 import { NotificationCardProps } from "./types";
 import "./NotificationCard.scss";
 

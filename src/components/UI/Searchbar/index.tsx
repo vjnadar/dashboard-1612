@@ -1,4 +1,3 @@
-import React from "react";
 import Modal from "../Modal";
 import { MenuNames } from "../../../components/DashboardLayout/Navbar/enums";
 import { SearchbarProps } from "./types";

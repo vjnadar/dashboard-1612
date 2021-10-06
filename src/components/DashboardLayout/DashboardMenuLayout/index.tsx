@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { DashboardMenuLayoutProps } from "./types";
 import { Spinner, Footer } from "../../UI";

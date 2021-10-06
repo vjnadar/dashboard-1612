@@ -1,4 +1,3 @@
-import React from "react";
 import { ChartCardProps } from "./types";
 import "./ChartCard.scss";
 

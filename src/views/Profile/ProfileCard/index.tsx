@@ -1,4 +1,3 @@
-import React from "react";
 import { ProfileCardProps } from "./types";
 import "./ProfileCard.scss";
 

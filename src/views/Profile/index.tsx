@@ -1,4 +1,3 @@
-import React from "react";
 import { Avatar } from "@material-ui/core";
 import { Facebook, Twitter, MailOutline } from "@material-ui/icons";
 import Card from "./ProfileCard";

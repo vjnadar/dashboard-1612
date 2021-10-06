@@ -1,4 +1,3 @@
-import React from "react";
 import "./Spinner.scss";
 
 function Spinner(): JSX.Element {
