@@ -10,5 +10,6 @@
 .SimpleTable tr,
 .SimpleTable td {
     color: rgb(255, 255, 255);
-    border: 1.5px solid #1e1e2e;
+    border: 1.5px solid $primary-color;
+    font-family: "Montserrat", sans-serif !important;
 }
