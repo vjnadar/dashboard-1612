@@ -1,6 +1,10 @@
 const chartLineColor = "rgb(201, 230, 250)";
 const chartBackgroundColor = "#000000";
 const chartBackgroundColor2 = "#000000";
+const font = {
+  family: "Montserrat", // Your font family
+  size: 12
+};
 export const chart1DataSet = {
   data: {
     labels: ["Jan", "Feb", "Mar", "April", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
@@ -30,6 +34,10 @@ export const chart1DataSet = {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        bodyFont: font,
+        titleFont: font
       }
     },
     tooltips: {
@@ -57,6 +65,7 @@ export const chart1DataSet = {
           backdropPadding: 2,
           backdropColor: "rgba(255,255,255,1)",
           color: chartLineColor,
+          font,
           major: {
             enable: true
           }
@@ -71,7 +80,7 @@ export const chart1DataSet = {
         ticks: {
           padding: 20,
           color: chartLineColor,
-
+          font,
           major: {
             enable: false
           }
@@ -110,6 +119,10 @@ export const chart2DataSet = {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        bodyFont: font,
+        titleFont: font
       }
     },
     tooltips: {
@@ -134,9 +147,11 @@ export const chart2DataSet = {
           suggestedMin: 0,
           suggestedMax: 125000,
           padding: 2,
+          fontFamily: "Verdana",
           backdropPadding: 2,
           backdropColor: "rgba(255,255,255,1)",
           color: chartLineColor,
+          font,
           major: {
             enable: true
           }
@@ -151,7 +166,7 @@ export const chart2DataSet = {
         ticks: {
           padding: 20,
           color: chartLineColor,
-
+          font,
           major: {
             enable: false
           }
@@ -189,6 +204,10 @@ export const chart3DataSet = {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        bodyFont: font,
+        titleFont: font
       }
     },
     tooltips: {
@@ -216,6 +235,7 @@ export const chart3DataSet = {
           backdropPadding: 2,
           backdropColor: "rgba(255,255,255,1)",
           color: chartLineColor,
+          font,
           major: {
             enable: true
           }
@@ -230,7 +250,7 @@ export const chart3DataSet = {
         ticks: {
           padding: 20,
           color: chartLineColor,
-
+          font,
           major: {
             enable: false
           }
@@ -268,6 +288,10 @@ export const chart4DataSet = {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        bodyFont: font,
+        titleFont: font
       }
     },
     tooltips: {
@@ -295,6 +319,7 @@ export const chart4DataSet = {
           backdropPadding: 2,
           backdropColor: "rgba(255,255,255,1)",
           color: chartLineColor,
+          font,
           major: {
             enable: true
           }
@@ -309,7 +334,7 @@ export const chart4DataSet = {
         ticks: {
           padding: 20,
           color: chartLineColor,
-
+          font,
           major: {
             enable: false
           }
