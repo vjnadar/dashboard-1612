@@ -16,7 +16,7 @@ A neat looking **Dashboard app template** built using **React JS and Typescript*
 - It uses **Webpack 5**.
 
 <p align="center">
-  <img src="https://imgur.com/tmScsJ8.png" width="100%" height="100%">
+  <img src="https://imgur.com/Z3JBC9y.png" width="100%" height="100%">
 </p>
 
 ## Frontend
