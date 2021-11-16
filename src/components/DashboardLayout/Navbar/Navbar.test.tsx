@@ -38,7 +38,7 @@ describe("this test-suite unit tests <Navbar/> when mobile view is true", () => 
     expect(searchbarSection).not.toHaveLength(2);
     const mobileViewNavigationBar = screen.getByRole("alert", { name: "Mobile main menu bar dropdown" });
     expect(mobileViewNavigationBar).toBeInTheDocument();
-    const mobileNavigationbarOpenButton = screen.queryByRole("button", { name: "Mobile main menubar open button" });
+    const mobileNavigationbarOpenButton = screen.getByRole("button", { name: "Mobile main menubar open button" });
     expect(mobileNavigationbarOpenButton).toBeInTheDocument();
   });
 });
