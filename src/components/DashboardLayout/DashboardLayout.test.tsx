@@ -1,7 +1,9 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 import { MenuNames } from "./Navbar/enums";
+import routes from "../../routes";
 import DashboardLayout from ".";
 
 jest.mock("react-chartjs-2", () => ({
@@ -131,16 +133,24 @@ describe("should test if the various animation classes of <DashboardLayout/> are
     userEvent.click(userProfileDropdownOpenBtn);
     expect(userProfileListbox).toHaveClass("Mobile-Navbar__item-list");
   });
-  it.skip("should check the various routes of <DashboardLayout/>", async () => {
-    // routes.forEach((route) => {
-    //   const routeElement = screen.getByRole("link", { name: `${route.name} Link` });
-    //   userEvent.click(routeElement);
-    //   const routeName = screen.getByRole("listitem", { name: "Selected route" });
-    //   expect(routeName).toHaveTextContent(route.name.toUpperCase());
-    // });
-    const routeElement = await waitFor(async () => {
-      await screen.findByText("Dashboard");
-      expect(routeElement).toBeInTheDocument();
+  it("should check the various routes of <DashboardLayout/>", () => {
+    const history = createMemoryHistory({
+      initialEntries: ["/"],
+      initialIndex: 0
+    });
+    render(
+      <Router history={history}>
+        <Route path="/">
+          <DashboardLayout />
+        </Route>
+      </Router>
+    );
+    routes.forEach((route) => {
+      const routeElement = screen.getByRole("link", { name: `${route.name}` });
+      userEvent.click(routeElement);
+      const routeName = screen.getByRole("listitem", { name: "Selected route" });
+      expect(routeName).toHaveTextContent(route.name.toUpperCase());
+      expect(history.location.pathname).toBe(route.path);
     });
   });
 });
