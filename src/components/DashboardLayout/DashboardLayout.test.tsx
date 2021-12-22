@@ -145,10 +145,10 @@ describe("should test if the various animation classes of <DashboardLayout/> are
         </Route>
       </Router>
     );
-    routes.forEach((route) => {
-      const routeElement = screen.getByRole("link", { name: `${route.name}` });
+    routes.forEach(async (route) => {
+      const routeElement = await screen.findByRole("link", { name: `${route.name}` });
       userEvent.click(routeElement);
-      const routeName = screen.getByRole("listitem", { name: "Selected route" });
+      const routeName = await screen.findByRole("listitem", { name: "Selected route" });
       expect(routeName).toHaveTextContent(route.name.toUpperCase());
       expect(history.location.pathname).toBe(route.path);
     });
