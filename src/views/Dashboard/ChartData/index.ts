@@ -1,6 +1,6 @@
-const chartLineColor = "rgb(201, 230, 250)";
+const chartLineColor = "rgba(201, 230, 250,1)";
 const chartBackgroundColor = "#000000";
-const chartBackgroundColor2 = "#000000";
+const chartBackgroundColor2 = "rgba(0,0,0,0.5)";
 const font = {
   family: "Montserrat", // Your font family
   size: 12
@@ -12,6 +12,7 @@ export const chart1DataSet = {
       {
         label: "Total Sales",
         fill: false,
+        spanGaps: true,
         backgroundColor: chartBackgroundColor,
         borderColor: chartLineColor,
         borderWidth: 1.5,
@@ -30,6 +31,7 @@ export const chart1DataSet = {
   },
   options: {
     responsive: true,
+    tension: 0.35,
     maintainAspectRatio: false,
     plugins: {
       legend: {
@@ -74,7 +76,14 @@ export const chart1DataSet = {
       xAxes: {
         barPercentage: 1.6,
         grid: {
-          display: false,
+          display: true,
+          color: chartLineColor,
+          offset: true,
+          borderWidth: 1,
+          drawBorder: true,
+          borderDash: [1, 5],
+          lineWidth: 0.5,
+          tickWidth: 2,
           zeroLineColor: "transparent"
         },
         ticks: {
@@ -100,8 +109,8 @@ export const chart2DataSet = {
         backgroundColor: chartBackgroundColor,
         borderColor: chartLineColor,
         borderWidth: 1.5,
-        borderDash: [],
-        borderDashOffset: 0.0,
+        borderDash: [5, 10],
+        borderDashOffset: 0.5,
         pointBackgroundColor: chartLineColor,
         pointBorderColor: "rgba(255,255,255,0)",
         pointHoverBackgroundColor: chartLineColor,
@@ -115,6 +124,7 @@ export const chart2DataSet = {
   },
   options: {
     responsive: true,
+    tension: 0.35,
     maintainAspectRatio: false,
     plugins: {
       legend: {
@@ -181,8 +191,8 @@ export const chart3DataSet = {
     datasets: [
       {
         label: "Total Expense",
-        fill: false,
-        backgroundColor: chartBackgroundColor2,
+        fill: "origin",
+        backgroundColor: chartBackgroundColor,
         borderColor: chartLineColor,
         borderWidth: 1.5,
         borderDash: [],
@@ -265,8 +275,8 @@ export const chart4DataSet = {
     datasets: [
       {
         label: "Total Profit",
-        fill: false,
-        backgroundColor: chartBackgroundColor,
+        fill: "origin",
+        backgroundColor: chartBackgroundColor2,
         borderColor: chartLineColor,
         borderWidth: 1.5,
         borderDash: [],
@@ -284,6 +294,7 @@ export const chart4DataSet = {
   },
   options: {
     responsive: true,
+    tension: 0.35,
     maintainAspectRatio: false,
     plugins: {
       legend: {
