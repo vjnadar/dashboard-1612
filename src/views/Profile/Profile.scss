@@ -275,6 +275,7 @@
 }
 @media (max-width: 540px) {
     .Profile {
+        overflow: auto;
         .Profile__grid {
             margin: 0;
             padding: 0;
@@ -286,6 +287,7 @@
         }
         .Profile__grid-user-contact {
             margin-top: 26px;
+            margin-left: 0px;
         }
         .Profile__grid-user-form-grid {
             justify-content: space-between;
