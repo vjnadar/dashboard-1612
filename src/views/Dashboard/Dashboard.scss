@@ -42,7 +42,7 @@
 .Dashboard__border {
     border-radius: 5px;
 }
-@media (max-width: 1000px) {
+@media (min-width: 0rem) and (max-width: 56.25rem) {
     .Dashboard {
         grid-template-columns: 100%;
         grid-template-rows: 250px 250px 250px 250px 350px 350px;
@@ -85,5 +85,43 @@
     }
     .Dashboard__border {
         border: 1.5px solid black;
+    }
+}
+@media (min-width: 56.3rem) and (max-width: 120rem) {
+    .Dashboard {
+        grid-template-columns: 0.5fr 0.5fr 0.7fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "big-chart big-chart big-chart"
+            "small-chart1 small-chart2 small-chart3"
+            "table1 table2 table2";
+        column-gap: 5px;
+        row-gap: 5px;
+        height: 100%;
+        padding: 5px 0 0 0;
+    }
+    .Dashboard__sales-chart-container {
+        grid-area: big-chart;
+        padding: 0 0 20px 0;
+    }
+    .Dashboard__income-chart-container {
+        grid-area: small-chart1;
+        padding: 0 20px 20px 0;
+    }
+    .Dashboard__expense-chart-container {
+        grid-area: small-chart2;
+        padding: 0 20px 20px 0;
+    }
+    .Dashboard__profit-chart-container {
+        grid-area: small-chart3;
+        padding: 0 0 20px 0;
+    }
+    .Dashboard__task-table-container {
+        grid-area: table1;
+        padding: 0 0 20px 0;
+    }
+    .Dashboard__employees-table-container {
+        grid-area: table2;
+        padding: 0 0 20px 20px;
     }
 }

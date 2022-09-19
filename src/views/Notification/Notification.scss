@@ -5,6 +5,7 @@
     padding-top: 5px;
     height: 100%;
     width: 100%;
+    overflow: auto;
     .Notification__title {
         margin-bottom: 10px;
         padding-bottom: 6px;
@@ -112,11 +113,13 @@
             overflow: unset;
             margin: 10px 10px 10px 0;
             padding: 10px;
+            background-color: rgba(0, 0, 0, 0);
         }
         .Notification__notification2 {
             overflow: unset;
             margin: 10px 10px 10px 0;
             padding: 10px;
+            background-color: rgba(0, 0, 0, 0);
         }
         .Notification__positioned-snackbar {
             margin: 10px 10px 10px 0;

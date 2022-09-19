@@ -51,4 +51,13 @@
             grid-template-rows: auto;
         }
     }
+    @media (min-width: 56.3rem) and (max-width: 120rem) {
+        .Icons-Component__grid {
+            grid-template-columns: repeat(3, 0.67fr);
+        }
+        .Icons-Component__row-element {
+            padding: 30px 30px;
+            margin: 30px 10px;
+        }
+    }
 }

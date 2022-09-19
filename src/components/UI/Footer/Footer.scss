@@ -1,6 +1,7 @@
 @import "../../../generalStyles/appBackgroundColors/";
 .Footer {
-  margin: 0 0 20px 0;
+  position: relative;
+  margin: 10px 0 10px 0;
   display: block;
   bottom: 0;
   z-index: 1;
@@ -11,8 +12,14 @@
   font-size: 12.95px;
   font-family: inherit;
 }
+.Footer nav {
+  height: 100%;
+  width: 100%;
+}
 .Footer__content {
   display: flex;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 10px;
   list-style: none;
