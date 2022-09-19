@@ -31,6 +31,14 @@
         margin: 10px 10px 10px 15px;
     }
 }
+@media (min-width: 82rem) and (max-width: 120rem) {
+    .Profile-Card {
+        width: auto;
+        padding: 10px;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
 @media (min-width: 0rem) and (max-width: 31.25rem) {
     .Profile-Card {
         width: auto;

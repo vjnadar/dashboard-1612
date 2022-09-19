@@ -220,7 +220,7 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 32rem) and (max-width: 81.25rem) {
     .Profile {
         overflow: auto;
         width: auto;
@@ -320,6 +320,14 @@
         }
         .Profile__grid-user-contact-share-buttons {
             padding: 8px;
+        }
+    }
+}
+@media (min-width: 82rem) and (max-width: 120rem) {
+    .Profile {
+        .Profile__grid {
+            grid-template-columns: 1.8fr 1.2fr;
+            grid-template-rows: 1fr;
         }
     }
 }
