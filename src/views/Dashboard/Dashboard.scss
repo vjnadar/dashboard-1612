@@ -89,8 +89,8 @@
 }
 @media (min-width: 56.3rem) and (max-width: 120rem) {
     .Dashboard {
-        grid-template-columns: 0.4fr 0.4fr 0.6fr;
-        grid-template-rows: 1.2fr 1.2fr 1.2fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1.2f);
         grid-template-areas:
             "big-chart big-chart big-chart"
             "small-chart1 small-chart2 small-chart3"
